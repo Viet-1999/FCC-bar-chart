@@ -4,7 +4,7 @@ var datasetUrl =
 
 // Select the SVG element and define margins and dimensions
 var svg = d3.select("svg"),
-  margin = { top: 50, right: 50, bottom: 100, left: 100 },
+  margin = { top: 100, right: 100, bottom: 100, left: 100 },
   width = svg.attr("width") - margin.left - margin.right,
   height = svg.attr("height") - margin.top - margin.bottom;
 
@@ -91,5 +91,5 @@ d3.json(datasetUrl).then(function (data) {
     .attr("fill", "navy")
     .on("mouseover", mouseover) // Tooltip appears on mouseover
     .on("mousemove", mousemove) // Tooltip moves with the mouse
-    .on("mouseleave", mouseleave); // Tooltip disappears on mouseleave
+    .on("mouseleave", mouseleave);
 });
